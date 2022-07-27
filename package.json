@@ -1,0 +1,27 @@
+{
+  "name": "js-microservice",
+  "version": "1.0.0",
+  "description": "give micro services in node a quick whirl",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/country-bumpkin-software/js-microservice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/country-bumpkin-software/js-microservice/issues"
+  },
+  "homepage": "https://github.com/country-bumpkin-software/js-microservice#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
