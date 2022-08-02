@@ -2,11 +2,9 @@ const express = require("express");
 const fs = require("fs");
 const app = express();
 // console.log(process.env.PORT);
-if (!process.env.PORT) {
-    throw new Error("Please specify a port number for the HTTP server \
-    with the environment variable PORT")
-}
-const PORT = process.env.PORT;
+const PORT=3000;
+
+// const PORT = process.env.PORT;
 app.get("/video", (req, res) => {
 
     const path = 
