@@ -1,0 +1,28 @@
+openapi: 3.0.3
+
+info:
+  title: video-streaming API
+  description: API that allows you to retrieve a video from the video-storage API
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:4000
+    description: local development server
+
+paths:
+  /video:
+    parameters:
+        - name: id
+          in: query
+          required: true
+          schema:
+            type: string
+
+    get:
+      operationId: getVideo
+      responses:
+        '200':
+          description: OK
+          content:
+            'video/mp4'
+      
