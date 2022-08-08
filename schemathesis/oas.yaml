@@ -17,6 +17,7 @@ paths:
           required: true
           schema:
             type: string
+            format: uuid
 
     get:
       operationId: getVideo
@@ -25,4 +26,9 @@ paths:
           description: OK
           content:
             'video/mp4'
+        '400':
+          description: Not Found
+          content:
+            'text/plain'
+
       

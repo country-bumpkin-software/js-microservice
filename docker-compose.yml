@@ -37,12 +37,14 @@ services:
       - DBNAME=video-streaming
     restart: "no"
   
-  # schemathesis:
-  #   image: schemathesis/schemathesis:latest
-  #   container_name: st
-  #   ports:
-  #     - "4003:80"
-  #   restart: "always"
-  #   volumes:
-  #     - ./oas.yaml :/app
-  #   command: "schemathesis -h" 
+  schemathesis:
+    image: schemathesis/schemathesis:latest
+    container_name: st
+    platform: linux/arm64
+    working_dir: /app
+    ports:
+      - "4003:80"
+    restart: "always"
+    volumes:
+      - ./schemathesis/oas.yaml :/app
+    command: ["st", "run","--base-url='http://localhost:4002'", "oas.yaml"]

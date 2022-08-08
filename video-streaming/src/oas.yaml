@@ -17,6 +17,12 @@ paths:
           required: true
           schema:
             type: string
+            format: uuid
+            maxLength: 24
+            minLenght: 24
+            maximum: 1
+          example:
+            id: 5d9e690ad76fe06a3d7ae416
 
     get:
       operationId: getVideo
